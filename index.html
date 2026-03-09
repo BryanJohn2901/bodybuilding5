@@ -511,6 +511,9 @@
 
             function openPopup(e) {
                 if(e) e.preventDefault();
+                const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+                document.body.style.paddingRight = scrollbarWidth + 'px';
+                document.body.style.overflow = 'hidden';
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
                 setTimeout(() => {
@@ -518,7 +521,6 @@
                     modalContent.classList.remove('scale-95');
                     modalContent.classList.add('scale-100');
                 }, 10);
-                document.body.style.overflow = 'hidden';
             }
 
             function closePopup() {
@@ -529,6 +531,7 @@
                     modal.classList.add('hidden');
                     modal.classList.remove('flex');
                     document.body.style.overflow = '';
+                    document.body.style.paddingRight = '';
                 }, 300);
             }
 
