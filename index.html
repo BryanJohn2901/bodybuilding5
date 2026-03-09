@@ -38,7 +38,8 @@
                         'heading': ['Oswald', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'hero-pattern': "url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1920&auto=format&fit=crop')",
+                        'hero-pattern': "url('img/web%20(1).webp')",
+                        'hero-mobile': "url('img/mobile.webp')",
                         'texture-pattern': "url('https://www.transparenttextures.com/patterns/carbon-fibre.png')"
                     },
                     keyframes: {
@@ -135,14 +136,20 @@
     </nav>
 
     <main>
-        <section id="metodo" class="relative min-h-screen flex items-center pt-32 pb-20 md:pt-0 overflow-hidden">
-            <div class="absolute inset-0 bg-hero-pattern bg-cover bg-center bg-no-repeat"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-brand-bg/90 via-brand-bg/80 to-brand-bg"></div>
+        <section id="metodo" class="relative min-h-screen flex items-center pb-20 md:pt-0 overflow-hidden bg-brand-bg">
+            <div class="hidden md:block absolute inset-0 bg-hero-pattern bg-cover bg-center bg-no-repeat"></div>
+            
+            <div class="block md:hidden absolute inset-0 bg-hero-mobile bg-[length:100%_auto] bg-top bg-no-repeat"></div>
+
+            <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-brand-bg/50 via-brand-bg/35 to-transparent"></div>
+            
+            <div class="block md:hidden absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/90 to-transparent"></div>
+
             <div class="absolute inset-0 bg-texture-pattern opacity-10 mix-blend-overlay"></div>
             
             <div class="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
 
-            <div class="container mx-auto px-4 relative z-10 mt-10 md:mt-20">
+            <div class="container mx-auto px-4 relative z-10 pt-[80vw] sm:pt-[60vw] md:pt-0 mt-10 md:mt-20">
                 <div class="max-w-4xl">
                     
                     <div class="flex flex-col items-start text-left">
@@ -299,7 +306,7 @@
                 <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <div class="group relative bg-brand-darkgray rounded-2xl overflow-hidden border border-white/10 hover:border-brand-primary/50 transition-colors duration-300" data-aos="zoom-in" data-aos-delay="0">
                         <div class="h-80 w-full overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1581009137042-c552e485697a?q=80&w=800&auto=format&fit=crop" alt="Walter Krause" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                            <img src="img/walter.webp" alt="Walter Krause" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
                             <div class="absolute inset-0 bg-gradient-to-t from-brand-darkgray to-transparent"></div>
                         </div>
                         <div class="p-8 -mt-16 relative z-10 text-center">
@@ -311,7 +318,7 @@
 
                     <div class="group relative bg-brand-darkgray rounded-2xl overflow-hidden border border-white/10 hover:border-brand-primary/50 transition-colors duration-300" data-aos="zoom-in" data-aos-delay="150">
                         <div class="h-80 w-full overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?q=80&w=800&auto=format&fit=crop" alt="Belmiro de Salles" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                            <img src="img/belmiro.webp" alt="Belmiro de Salles" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
                             <div class="absolute inset-0 bg-gradient-to-t from-brand-darkgray to-transparent"></div>
                         </div>
                         <div class="p-8 -mt-16 relative z-10 text-center">
@@ -323,7 +330,7 @@
 
                     <div class="group relative bg-brand-darkgray rounded-2xl overflow-hidden border border-white/10 hover:border-brand-primary/50 transition-colors duration-300" data-aos="zoom-in" data-aos-delay="300">
                         <div class="h-80 w-full overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=800&auto=format&fit=crop" alt="Carlos Garon" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
+                            <img src="img/garon.webp" alt="Carlos Garon" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0">
                             <div class="absolute inset-0 bg-gradient-to-t from-brand-darkgray to-transparent"></div>
                         </div>
                         <div class="p-8 -mt-16 relative z-10 text-center">
