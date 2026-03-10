@@ -45,8 +45,8 @@
                         'heading': ['Oswald', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'hero-pattern': "url('img/web%20(1).webp')",
-                        'hero-mobile': "url('img/mobile.webp')",
+                        'hero-pattern': "url('img/web2.webp')",
+                        'hero-mobile': "url('img/mobile2.webp')",
                         'texture-pattern': "url('https://www.transparenttextures.com/patterns/carbon-fibre.png')"
                     },
                     keyframes: {
@@ -471,7 +471,7 @@
                 <p class="text-sm text-brand-gray-400">Preencha os dados abaixo para acessar a oferta exclusiva.</p>
             </div>
 
-            <form id="form_bodybuilding5" class="space-y-4 mt-6 popup-form">
+            <form id="i-bb5" class="space-y-4 mt-6 popup-form">
                 <div>
                     <label for="lead-nome" class="block text-sm font-medium text-gray-300 mb-1">Nome</label>
                     <input type="text" id="lead-nome" name="nome" required placeholder="Seu nome completo"
@@ -590,7 +590,7 @@
             // ==========================================
             // ENVIO DO FORMULÁRIO (WEBHOOK)
             // ==========================================
-            document.getElementById('form_bodybuilding5').addEventListener('submit', async function(e) {
+            document.getElementById('i-bb5').addEventListener('submit', async function(e) {
                 e.preventDefault();
 
                 const btnSubmit = this.querySelector('.btn-submit');
@@ -624,9 +624,11 @@
                 try {
                     await fetch(WEBHOOK_URL, {
                         method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload),
-                        mode: 'no-cors' 
+                        headers: { 
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json' 
+                        },
+                        body: JSON.stringify(payload)
                     });
                 } catch (error) {
                     console.error('Erro de rede ao chamar o webhook:', error);

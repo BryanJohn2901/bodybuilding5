@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glass-strong {
+  background: rgba(5, 5, 5, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 768px) {
+  .benefit-content {
+    transform: translateY(2rem);
+  }
+  .benefit-desc {
+    opacity: 0;
+  }
+  .group:hover .benefit-content {
+    transform: translateY(0);
+  }
+  .group:hover .benefit-desc {
+    opacity: 1;
+  }
+}
+
+.info-bar-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.info-bar-item:hover .info-bar-icon {
+  transform: scale(1.2);
+}
+.info-bar-item:hover .info-bar-icon.icon-replay {
+  transform: scale(1.2) rotate(180deg);
+}
+.info-bar-item:hover .info-bar-icon.icon-certificate {
+  transform: scale(1.2) rotate(12deg);
+}
