@@ -101,6 +101,9 @@
         .info-bar-item:hover .info-bar-icon.icon-certificate {
             transform: scale(1.2) rotate(12deg);
         }
+        .cupom-ouro-ticket {
+            filter: sepia(0.35) hue-rotate(-25deg) saturate(1.3);
+        }
     </style>
 </head>
 <body class="bg-brand-bg text-brand-gray-300 font-sans antialiased overflow-x-hidden selection:bg-brand-primary selection:text-white">
@@ -115,7 +118,7 @@
             <div class="relative flex items-center justify-between px-6 py-3 rounded-full glass-strong shadow-[0_8px_32px_0_rgba(0,0,0,0.8)] transition-all duration-300 hover:border-brand-primary/40 hover:shadow-[0_12px_40px_0_rgba(220,38,38,0.15)]">
                 
                 <a href="#" class="block hover:opacity-80 transition-opacity duration-300 flex items-center shrink-0">
-                    <img src="img/logoPta.svg" alt="MESTRES.FIT" class="h-12 w-auto"> </a>
+                    <img src="img/logoPta.svg" alt="MESTRES.FIT" class="h-11 w-auto"> </a>
 
                 <div class="hidden md:flex items-center gap-8">
                     <a href="#metodo" class="text-xs font-bold uppercase tracking-[0.1em] text-brand-gray-400 hover:text-white transition-colors duration-300 relative group">
@@ -136,9 +139,9 @@
                     </a>
                 </div>
 
-                <a href="#checkout" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-brand-primary to-brand-accent px-8 py-2.5 transition-all duration-300 hover:shadow-[0_0_24px_rgba(220,38,38,0.6)] hover:scale-105 cursor-pointer border-0">
+                <a href="#checkout" class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-brand-primary hover:bg-brand-accent px-10 py-4 transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-0.5 cursor-pointer border-0">
                     <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-                    <span class="relative text-[10px] font-black uppercase tracking-[0.2em] text-white">
+                    <span class="relative text-xs font-bold uppercase tracking-[0.2em] text-white">
                         Inscreva-se
                     </span>
                 </a>
@@ -163,26 +166,26 @@
             <div class="container mx-auto px-4 relative z-10 pt-[80vw] sm:pt-[60vw] md:pt-0 mt-10 md:mt-20">
                 <div class="max-w-4xl">
                     
-                    <div class="flex flex-col items-start text-left">
-                        <img src="img/logo.svg" alt="Imersão Mestres da Musculação" class="h-16 sm:h-20 w-auto mt-10 mb-6" data-aos="fade-up">
-                        <div data-aos="fade-up" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-primary/30 bg-brand-primary/10 text-brand-primary text-xs font-bold uppercase tracking-widest backdrop-blur-md mb-6">
+                    <div class="flex flex-col items-center md:items-start text-center md:text-left">
+                        <img src="img/logo.svg" alt="Imersão Mestres da Musculação" class="h-14 sm:h-16 md:h-[4.5rem] w-auto mt-10 mb-6 mx-auto md:mx-0" data-aos="fade-up">
+                        <div data-aos="fade-up" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-primary/30 bg-brand-primary/10 text-brand-primary text-xs font-bold uppercase tracking-widest backdrop-blur-md mb-6 mx-auto md:mx-0">
                             <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span> Imersão 100% Online
                         </div>
 
-                        <h1 data-aos="fade-up" data-aos-delay="100" class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white uppercase leading-[1.3] tracking-tight mb-6 drop-shadow-2xl">
-                            O caminho para dominar a Musculação, a Estética Corporal e os <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-primary to-brand-accent drop-shadow-none">Segredos da Hipertrofia</span> com alguns dos maiores especialistas do Brasil.
+                        <h1 data-aos="fade-up" data-aos-delay="100" class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-[1.55] tracking-tight mb-6 drop-shadow-2xl uppercase">
+                            O caminho para dominar a musculação,<br>a estética corporal e os <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-primary to-brand-accent drop-shadow-none">segredos da hipertrofia</span> com alguns dos maiores especialistas do Brasil.
                         </h1>
 
-                        <p data-aos="fade-up" data-aos-delay="200" class="text-base md:text-lg text-brand-gray-300 mb-10 max-w-xl leading-relaxed">
+                        <p data-aos="fade-up" data-aos-delay="200" class="text-base md:text-lg text-brand-gray-300 mb-10 max-w-xl leading-relaxed mx-auto md:mx-0">
                             A musculação evoluiu. O caminho para dominar a Estética Corporal com alguns dos maiores especialistas do Brasil. Aprenda com quem realmente vive o treino na prática.
                         </p>
 
-                        <div data-aos="zoom-in" data-aos-delay="300" class="flex flex-col items-start gap-4 w-full sm:w-auto">
-                            <a href="#checkout" class="group relative w-full sm:w-auto bg-brand-primary text-white font-heading font-bold text-xl uppercase tracking-widest py-4 px-10 rounded hover:bg-brand-accent transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-1 overflow-hidden inline-flex items-center justify-center">
+                        <div data-aos="zoom-in" data-aos-delay="300" class="flex flex-col items-center md:items-start gap-4 w-full sm:w-auto">
+                            <a href="#checkout" class="group relative w-full sm:w-auto bg-brand-primary hover:bg-brand-accent text-white font-heading font-bold text-xl uppercase tracking-widest py-4 px-10 rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-0.5 overflow-hidden inline-flex items-center justify-center">
                                 <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
                                 Quero garantir meu acesso
                             </a>
-                            <span class="text-sm text-brand-gray-400 font-medium flex items-center gap-2 mb-8">
+                            <span class="text-sm text-brand-gray-400 font-medium flex items-center gap-2 mb-8 justify-center md:justify-start">
                                 <i class="fas fa-lock text-brand-primary"></i> Vagas estritamente limitadas
                             </span>
                         </div>
@@ -192,7 +195,7 @@
             </div>
         </section>
 
-        <div class="relative z-20 -mt-16 md:-mt-24 px-4 container mx-auto" data-aos="fade-up">
+        <div class="relative z-20 -mt-8 md:-mt-12 px-4 container mx-auto" data-aos="fade-up">
             <div class="glass-strong rounded-2xl p-6 md:p-10 shadow-2xl border-t border-white/10">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 divide-x-0 md:divide-x md:divide-white/10">
                     <div class="info-bar-item text-center px-4 cursor-default">
@@ -211,13 +214,98 @@
                         <p class="text-xs text-brand-gray-400 uppercase tracking-widest mt-1">De Participação</p>
                     </div>
                     <div class="info-bar-item text-center px-4 cursor-default">
-                        <i class="fas fa-rotate-right info-bar-icon icon-replay text-4xl md:text-5xl text-brand-primary mb-4 opacity-90"></i>
-                        <h3 class="text-white font-heading font-bold uppercase tracking-wider text-lg">Replay</h3>
-                        <p class="text-xs text-brand-gray-400 uppercase tracking-widest mt-1">Tempo limitado</p>
+                        <i class="fas fa-tag info-bar-icon text-4xl md:text-5xl text-brand-primary mb-4 opacity-90"></i>
+                        <h3 class="text-white font-heading font-bold uppercase tracking-wider text-lg">Cupom Ouro PTA</h3>
+                        <p class="text-xs text-brand-gray-400 uppercase tracking-widest mt-1">Benefício exclusivo</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <section id="checkout" class="py-24 bg-brand-bg relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/10 rounded-full blur-[150px] pointer-events-none"></div>
+            <div class="absolute inset-0 bg-texture-pattern opacity-5 mix-blend-overlay"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="font-heading text-3xl md:text-5xl font-bold text-white uppercase mb-4 tracking-tight">
+                        Acesso imediato após confirmação
+                    </h2>
+                    <p class="text-brand-gray-400 text-lg">As vagas são limitadas. Garanta seu lugar antes que vire o lote.</p>
+                </div>
+
+                <div class="max-w-lg mx-auto" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="relative bg-brand-darkgray/80 backdrop-blur-xl border-2 border-brand-primary rounded-3xl p-1 shadow-[0_0_50px_rgba(220,38,38,0.25)] hover:shadow-[0_0_80px_rgba(220,38,38,0.4)] transition-shadow duration-500">
+                        <div class="bg-brand-night rounded-3xl p-8 md:p-10 text-center relative overflow-hidden">
+                            
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 bg-brand-primary text-white text-xs font-bold uppercase tracking-widest py-1 px-6 rounded-b-lg">
+                                Desconto Especial
+                            </div>
+
+                            <div class="mt-6 mb-8 flex flex-col items-center justify-center">
+                                <span class="text-brand-gray-500 line-through text-2xl font-heading mb-1">R$ 197</span>
+                                <div class="flex items-start gap-2 text-white">
+                                    <span class="font-heading text-xl font-bold mt-2">R$</span>
+                                    <span class="text-6xl md:text-7xl font-heading font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-brand-gray-300">47,00</span>
+                                </div>
+                            </div>
+
+                            <ul class="space-y-4 text-sm text-brand-gray-300 mb-10 text-left w-full max-w-xs mx-auto">
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-brand-primary"></i>
+                                    <span>Acesso completo de domingo</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-brand-primary"></i>
+                                    <span>Material de apoio digital</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-brand-primary"></i>
+                                    <span>Certificado de participação</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fas fa-check-circle text-brand-primary"></i>
+                                    <span>Cupom Ouro PTA</span>
+                                </li>
+                            </ul>
+                            
+                            <button class="js-open-modal w-full bg-brand-primary hover:bg-brand-accent text-white font-heading font-bold text-xl uppercase tracking-widest py-4 px-10 rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-0.5">
+                                Comprar Agora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cupom-ouro" class="py-24 bg-brand-night relative border-b border-white/5">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                    <div class="w-full md:w-2/5 flex-shrink-0 flex justify-center md:justify-start order-2 md:order-1 mt-8 mb-10 md:mt-0 md:mb-0">
+                        <div class="overflow-hidden rounded-3xl w-80 h-80 md:w-[420px] md:h-[420px] lg:w-[520px] lg:h-[520px] shadow-[0_0_60px_rgba(220,38,38,0.7)] group">
+                            <img src="img/ticket%20dourado%20(2).webp" alt="Cupom Ouro PTA" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110">
+                        </div>
+                    </div>
+                    <div class="w-full md:w-3/5 space-y-4 order-1 md:order-2 text-center md:text-left" data-aos="fade-up">
+                        <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white uppercase mb-4 tracking-tight">
+                            O que é o <span class="text-brand-primary">Cupom Ouro</span> PTA?
+                        </h2>
+                        <p class="text-brand-gray-400 text-lg">Um benefício exclusivo para quem participa da imersão.</p>
+                        <div class="w-24 h-1 bg-brand-primary mt-4 md:mx-0 mx-auto"></div>
+                        <p class="text-brand-gray-300 text-sm md:text-base leading-relaxed">
+                            Um benefício exclusivo que poderá ser utilizado para se matricular em nossa Pós-graduação. Esse cupom garante uma condição especial reservada apenas para participantes do evento.
+                        </p>
+                        <p class="text-brand-gray-400 text-sm flex items-start gap-2">
+                            <i class="fas fa-exclamation-triangle text-amber-400 shrink-0 mt-0.5"></i>
+                            <span>O Cupom Ouro será liberado somente para quem estiver inscrito na imersão.</span>
+                        </p>
+                        <a href="#checkout" class="inline-block mt-6 bg-brand-primary hover:bg-brand-accent text-white font-heading font-bold text-xl uppercase tracking-widest py-4 px-10 rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-0.5">
+                            Garantir meu cupom
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="beneficios" class="py-24 bg-brand-bg relative border-b border-white/5">
             <div class="container mx-auto px-4">
@@ -302,14 +390,14 @@
                     </div>
                 </div>
                 <div class="text-center mt-12" data-aos="fade-up">
-                    <a href="#checkout" class="bg-brand-primary text-white font-heading font-bold text-xl uppercase tracking-widest py-4 px-10 rounded hover:bg-brand-accent transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-1 inline-block">
+                    <a href="#checkout" class="bg-brand-primary hover:bg-brand-accent text-white font-heading font-bold text-xl uppercase tracking-widest py-4 px-10 rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-0.5 inline-block">
                         Quero garantir minha vaga
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="professores" class="py-24 bg-brand-night relative border-b border-white/5">
+        <section id="professores" class="pt-32 pb-32 md:pb-24 bg-brand-night relative border-b border-white/5">
             <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
             <div class="container mx-auto px-4 relative z-10">
                 <div class="text-center mb-16" data-aos="fade-up">
@@ -357,65 +445,9 @@
                     </div>
                 </div>
                 <div class="text-center mt-12" data-aos="fade-up">
-                    <a href="#checkout" class="bg-brand-primary text-white font-heading font-bold text-xl uppercase tracking-widest py-4 px-10 rounded hover:bg-brand-accent transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-1 inline-block">
+                    <a href="#checkout" class="bg-brand-primary hover:bg-brand-accent text-white font-heading font-bold text-xl uppercase tracking-widest py-4 px-10 rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-0.5 inline-block">
                         Quero garantir minha vaga
                     </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="checkout" class="py-24 bg-brand-bg relative overflow-hidden">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/10 rounded-full blur-[150px] pointer-events-none"></div>
-            <div class="absolute inset-0 bg-texture-pattern opacity-5 mix-blend-overlay"></div>
-
-            <div class="container mx-auto px-4 relative z-10">
-                <div class="text-center mb-12" data-aos="fade-up">
-                    <h2 class="font-heading text-3xl md:text-5xl font-bold text-white uppercase mb-4 tracking-tight">
-                        Acesso imediato após confirmação
-                    </h2>
-                    <p class="text-brand-gray-400 text-lg">As vagas são limitadas. Garanta seu lugar antes que vire o lote.</p>
-                </div>
-
-                <div class="max-w-lg mx-auto" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="relative bg-brand-darkgray/80 backdrop-blur-xl border-2 border-brand-primary rounded-3xl p-1 shadow-[0_0_50px_rgba(220,38,38,0.25)] hover:shadow-[0_0_80px_rgba(220,38,38,0.4)] transition-shadow duration-500">
-                        <div class="bg-brand-night rounded-3xl p-8 md:p-10 text-center relative overflow-hidden">
-                            
-                            <div class="absolute top-0 left-1/2 -translate-x-1/2 bg-brand-primary text-white text-xs font-bold uppercase tracking-widest py-1 px-6 rounded-b-lg">
-                                Desconto Especial
-                            </div>
-
-                            <div class="mt-6 mb-8 flex flex-col items-center justify-center">
-                                <span class="text-brand-gray-500 line-through text-2xl font-heading mb-1">R$ 197</span>
-                                <div class="flex items-start gap-2 text-white">
-                                    <span class="font-heading text-xl font-bold mt-2">R$</span>
-                                    <span class="text-6xl md:text-7xl font-heading font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-brand-gray-300">47,00</span>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-4 text-sm text-brand-gray-300 mb-10 text-left w-full max-w-xs mx-auto">
-                                <li class="flex items-center gap-3">
-                                    <i class="fas fa-check-circle text-brand-primary"></i>
-                                    <span>Acesso completo de domingo</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <i class="fas fa-check-circle text-brand-primary"></i>
-                                    <span>Material de apoio digital</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <i class="fas fa-check-circle text-brand-primary"></i>
-                                    <span>Certificado de participação</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <i class="fas fa-check-circle text-brand-primary"></i>
-                                    <span>Acesso ao replay limitado</span>
-                                </li>
-                            </ul>
-                            
-                            <button class="js-open-modal w-full bg-gradient-to-r from-brand-primary to-brand-accent text-white font-heading font-bold text-xl uppercase tracking-widest py-5 rounded-xl hover:scale-105 transition-all duration-300 shadow-[0_10px_30px_rgba(220,38,38,0.5)]">
-                                Comprar Agora
-                            </button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -427,7 +459,7 @@
                 
                 <div class="lg:col-span-4 space-y-4">
                     <a href="#" class="inline-block hover:opacity-80 transition-opacity duration-300 mb-4">
-                        <img src="img/logoPta.svg" alt="MESTRES.FIT" class="h-12 w-auto"> </a>
+                        <img src="img/logoPta.svg" alt="MESTRES.FIT" class="h-11 w-auto"> </a>
                     <p class="text-brand-gray-500 text-sm leading-relaxed max-w-sm">
                         A maior imersão online para profissionais que buscam dominar a estética corporal, hipertrofia e prescrição avançada de treino com os melhores especialistas do Brasil.
                     </p>
@@ -472,6 +504,19 @@
         </div>
     </footer>
 
+    <!-- Aviso de Cookies -->
+    <div id="cookie-bar" class="fixed bottom-0 left-0 right-0 z-[90] bg-brand-night border-t border-white/10 px-4 py-4 md:py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.5)] hidden">
+        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-brand-gray-400 text-sm text-center sm:text-left">
+                Utilizamos cookies para melhorar sua experiência e analisar o tráfego. Ao continuar, você concorda com nossa
+                <a href="#" class="text-brand-primary hover:text-brand-accent underline transition-colors">Política de Privacidade</a>.
+            </p>
+            <button type="button" id="cookie-accept" class="shrink-0 bg-brand-primary hover:bg-brand-accent text-white font-bold text-sm uppercase tracking-wider px-6 py-2.5 rounded-full transition-colors">
+                Aceitar
+            </button>
+        </div>
+    </div>
+
     <div id="capture-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 transition-opacity duration-300">
         <div class="relative bg-brand-night border border-brand-primary/40 rounded-2xl shadow-[0_0_50px_rgba(220,38,38,0.15)] max-w-md w-full p-8 transform scale-95 transition-transform duration-300" id="modal-content">
             
@@ -504,7 +549,7 @@
                     </div>
                     <p class="error-msg text-red-400 text-xs mt-1 hidden">Informe o DDD e o número completo.</p>
                 </div>
-                <button type="submit" class="w-full bg-brand-primary text-white font-sans font-bold py-4 rounded-full uppercase tracking-widest hover:shadow-[0_0_20px_rgba(220,38,38,0.6)] transition btn-submit">
+                <button type="submit" class="w-full bg-brand-primary hover:bg-brand-accent text-white font-heading font-bold text-xl uppercase tracking-widest py-4 px-10 rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-0.5 btn-submit">
                     Avançar para Pagamento
                 </button>
             </form>
@@ -575,6 +620,23 @@
                     closePopup();
                 }
             });
+
+            // ==========================================
+            // AVISO DE COOKIES
+            // ==========================================
+            const cookieBar = document.getElementById('cookie-bar');
+            const cookieAccept = document.getElementById('cookie-accept');
+            if (!localStorage.getItem('cookieConsent')) {
+                cookieBar.classList.remove('hidden');
+                cookieBar.classList.add('block');
+            }
+            if (cookieAccept) {
+                cookieAccept.addEventListener('click', () => {
+                    localStorage.setItem('cookieConsent', 'true');
+                    cookieBar.classList.add('hidden');
+                    cookieBar.classList.remove('block');
+                });
+            }
 
             // ==========================================
             // MÁSCARA DE TELEFONE

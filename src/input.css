@@ -36,3 +36,7 @@
 .info-bar-item:hover .info-bar-icon.icon-certificate {
   transform: scale(1.2) rotate(12deg);
 }
+
+.cupom-ouro-ticket {
+  filter: sepia(0.35) hue-rotate(-25deg) saturate(1.3);
+}
