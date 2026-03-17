@@ -24,8 +24,8 @@ module.exports = {
         heading: ['Oswald', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-pattern': "url('../img/web3.webp')",
-        'hero-mobile': "url('../img/mobile3.webp')",
+        'hero-pattern': "url('../img/bgHeroAtualizado.webp')",
+        'hero-mobile': "url('../img/bgHeroMobileAtualizado.webp')",
         'texture-pattern': "url('https://www.transparenttextures.com/patterns/carbon-fibre.png')",
       },
       keyframes: {
