@@ -513,13 +513,21 @@
 
     <div class="fixed bottom-0 left-0 right-0 z-[80] bg-brand-primary border-t-2 border-brand-accent px-4 py-3 shadow-[0_-8px_30px_rgba(220,38,38,0.4)]">
         <div class="container mx-auto max-w-5xl flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3 flex-1 min-w-0">
                 <div class="flex items-center justify-center w-10 h-10 rounded-full bg-white/15 text-white shrink-0 ring-2 ring-white/30 shadow-inner">
                     <i class="fas fa-dumbbell text-lg"></i>
                 </div>
-                <p class="text-white font-heading font-bold uppercase tracking-wider text-sm sm:text-base text-center sm:text-left">
-                    Disponíveis apenas <span class="text-brand-navy font-black bg-white px-2 py-0.5 rounded mx-1">500</span> ingressos
-                </p>
+                <div class="flex flex-col gap-1.5 min-w-0 flex-1">
+                    <p class="text-white font-heading font-bold uppercase tracking-wider text-sm sm:text-base text-center sm:text-left">
+                        Disponível apenas <span class="text-brand-navy font-black bg-white px-2 py-0.5 rounded">500</span> ingressos Lote 1
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <div class="h-2 flex-1 min-w-[80px] max-w-[200px] rounded-full bg-white/25 overflow-hidden" aria-hidden="true">
+                            <div class="progress-fill h-full rounded-full bg-white transition-[width] duration-[1500ms] ease-out" style="width: 0"></div>
+                        </div>
+                        <span class="progress-pct text-white font-heading font-black text-sm tabular-nums">0%</span>
+                    </div>
+                </div>
             </div>
             <button class="js-open-modal w-full sm:w-auto bg-brand-navy hover:bg-brand-anthracite text-white font-heading font-bold text-sm sm:text-base uppercase tracking-widest py-2.5 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap border border-white/10">
                 Garantir meu ingresso
@@ -588,6 +596,26 @@
                 offset: 50,
                 duration: 800,
             });
+
+            // Barra de progresso de ingressos (0% → 94% ao carregar)
+            (function () {
+                const fill = document.querySelector('.progress-fill');
+                const pct = document.querySelector('.progress-pct');
+                if (!fill || !pct) return;
+                const endPct = 94;
+                const duration = 1500;
+                const start = performance.now();
+                function step(now) {
+                    const elapsed = now - start;
+                    const t = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - t, 2);
+                    const value = Math.round(eased * endPct);
+                    fill.style.width = value + '%';
+                    pct.textContent = value + '%';
+                    if (t < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            })();
 
             // ==========================================
             // CONFIGURAÇÕES GERAIS
