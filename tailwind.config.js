@@ -24,14 +24,21 @@ module.exports = {
         heading: ['Oswald', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-pattern': "url('../img/bgHeroAtualizado.webp')",
-        'hero-mobile': "url('../img/bgHeroMobileAtualizado.webp')",
+        'hero-pattern': "url('../img/Prancheta 1.png')",
+        'hero-mobile': "url('../img/Prancheta 1-1.png')",
         'texture-pattern': "url('https://www.transparenttextures.com/patterns/carbon-fibre.png')",
       },
       keyframes: {
         shimmer: {
           '100%': { transform: 'translateX(100%)' },
         },
+        ticker: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        ticker: 'ticker 20s linear infinite',
       },
     },
   },

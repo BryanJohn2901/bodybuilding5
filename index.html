@@ -57,7 +57,14 @@
                     keyframes: {
                         shimmer: {
                             '100%': { transform: 'translateX(100%)' },
+                        },
+                        ticker: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' }
                         }
+                    },
+                    animation: {
+                        'ticker': 'ticker 40s linear infinite',
                     }
                 }
             }
@@ -102,7 +109,6 @@
             filter: sepia(0.35) hue-rotate(-25deg) saturate(1.3);
         }
     </style>
-    <!-- Hotjar Tracking Code for I-BB5 -->
     <script>
         (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -155,7 +161,7 @@
     </nav>
 
     <main>
-        <section id="metodo" class="relative min-h-screen flex items-center pb-20 md:pt-0 overflow-hidden bg-brand-bg">
+        <section id="metodo" class="relative min-h-screen flex flex-col justify-center pb-10 md:pt-0 overflow-hidden bg-brand-bg">
             <div class="hidden md:block absolute inset-0 bg-hero-pattern bg-cover bg-center bg-no-repeat"></div>
             
             <div class="block md:hidden absolute inset-0 bg-hero-mobile bg-[length:100%_auto] bg-top bg-no-repeat"></div>
@@ -168,17 +174,18 @@
             
             <div class="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
 
-            <div class="container mx-auto px-4 relative z-10 pt-[80vw] sm:pt-[60vw] md:pt-0 mt-10 md:mt-20">
+            <div class="container mx-auto px-4 relative z-10 pt-[55vw] sm:pt-[45vw] md:pt-0 mt-2 md:mt-20 flex-grow flex items-center">
                 <div class="max-w-4xl">
                     
                     <div class="flex flex-col items-center md:items-start text-center md:text-left">
                         <img src="img/logo.svg" alt="Imersão Mestres da Musculação" class="h-12 sm:h-14 md:h-16 w-auto mt-10 mb-6 mx-auto md:mx-0" data-aos="fade-up">
-                        <div data-aos="fade-up" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-primary/30 bg-brand-primary/10 text-brand-primary text-xs font-bold uppercase tracking-widest backdrop-blur-md mb-6 mx-auto md:mx-0">
-                            <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span> Imersão 100% Online
+                        
+                        <div data-aos="fade-up" class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-brand-primary/40 bg-[#160505] text-brand-primary text-xs font-bold uppercase tracking-widest backdrop-blur-md mb-6 mx-auto md:mx-0">
+                            <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span> Exclusivo para profissionais de educação física
                         </div>
 
-                        <h1 data-aos="fade-up" data-aos-delay="100" class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-[1.55] tracking-tight mb-6 drop-shadow-2xl uppercase">
-                            O caminho para dominar a musculação,<br>a estética corporal e os <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-primary to-brand-accent drop-shadow-none">segredos da hipertrofia</span> com alguns dos maiores especialistas do Brasil.
+                        <h1 data-aos="fade-up" data-aos-delay="100" class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-[1.55] tracking-tight mb-6 drop-shadow-2xl lowercase">
+                            o caminho para dominar a musculação,<br>a estética corporal e os <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-primary to-brand-accent drop-shadow-none">segredos da hipertrofia</span> com alguns dos maiores especialistas do brasil.
                         </h1>
 
                         <p data-aos="fade-up" data-aos-delay="200" class="text-base md:text-lg text-brand-gray-300 mb-10 max-w-xl leading-relaxed mx-auto md:mx-0">
@@ -188,19 +195,39 @@
                         <div data-aos="zoom-in" data-aos-delay="300" class="flex flex-col items-center md:items-start gap-4 w-full sm:w-auto">
                             <a href="#checkout" class="group relative w-full sm:w-auto bg-brand-primary hover:bg-brand-accent text-white font-heading font-bold text-xl uppercase tracking-widest py-4 px-10 rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-0.5 overflow-hidden inline-flex items-center justify-center">
                                 <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
-                                Quero garantir meu acesso
+                                Comprar ingresso | lote 1
                             </a>
-                            <span class="text-sm text-brand-gray-400 font-medium flex items-center gap-2 mb-8 justify-center md:justify-start">
-                                <i class="fas fa-lock text-brand-primary"></i> Vagas estritamente limitadas
-                            </span>
+                            
+                            <div class="w-full max-w-[280px] mt-2 mb-8">
+                                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden mb-2">
+                                    <div class="h-full bg-brand-primary w-[94%]"></div>
+                                </div>
+                                <p class="text-xs text-brand-gray-400 font-medium text-center md:text-left">
+                                    <span class="text-white font-bold">94%</span> dos ingressos vendidos a R$ 47,00
+                                </p>
+                            </div>
                         </div>
                     </div>
-
+                </div>
+            </div>
+            
+            <div class="w-full bg-black border-y border-brand-primary/50 py-4 overflow-hidden relative z-20 mt-6 md:mt-0 shadow-[0_0_20px_rgba(220,38,38,0.5)]">
+                <div class="flex whitespace-nowrap w-[200%] animate-ticker">
+                    <div class="flex w-1/2 justify-around items-center text-white font-heading uppercase tracking-widest text-sm md:text-lg font-bold">
+                        <span class="mx-8"><i class="fas fa-star mr-2 text-brand-primary"></i> Seja referência</span>
+                        <span class="mx-8"><i class="fas fa-chart-line mr-2 text-brand-primary"></i> Dobre seu faturamento</span>
+                        <span class="mx-8"><i class="fas fa-check-circle mr-2 text-brand-primary"></i> 100% prático</span>
+                    </div>
+                    <div class="flex w-1/2 justify-around items-center text-white font-heading uppercase tracking-widest text-sm md:text-lg font-bold">
+                        <span class="mx-8"><i class="fas fa-star mr-2 text-brand-primary"></i> Seja referência</span>
+                        <span class="mx-8"><i class="fas fa-chart-line mr-2 text-brand-primary"></i> Dobre seu faturamento</span>
+                        <span class="mx-8"><i class="fas fa-check-circle mr-2 text-brand-primary"></i> 100% prático</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div class="relative z-20 -mt-8 md:-mt-12 px-4 container mx-auto" data-aos="fade-up">
+        <div class="relative z-20 mt-12 md:mt-16 mb-12 px-4 container mx-auto hidden md:block" data-aos="fade-up">
             <div class="glass-strong rounded-2xl p-6 md:p-10 shadow-2xl border-t border-white/10">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 divide-x-0 md:divide-x md:divide-white/10">
                     <div class="info-bar-item text-center px-4 cursor-default">
@@ -274,9 +301,71 @@
                                 </li>
                             </ul>
                             
-                            <button class="js-open-modal w-full bg-brand-primary hover:bg-brand-accent text-white font-heading font-bold text-xl uppercase tracking-widest py-4 px-10 rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-0.5">
-                                Comprar Agora
+                            <button class="js-open-modal w-full bg-brand-primary hover:bg-brand-accent text-white font-heading font-bold text-xl uppercase tracking-widest py-4 px-10 rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-0.5 mb-4">
+                                Comprar ingresso | lote 1
                             </button>
+                            
+                            <div class="w-full">
+                                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden mb-2">
+                                    <div class="h-full bg-brand-primary w-[94%]"></div>
+                                </div>
+                                <p class="text-xs text-brand-gray-400 font-medium">
+                                    <span class="text-white font-bold">94%</span> dos ingressos vendidos a R$ 47,00
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="py-24 bg-brand-night relative border-b border-white/5">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="font-heading text-3xl md:text-5xl font-bold text-white uppercase mb-4 tracking-tight">
+                        O que dizem os <span class="text-brand-primary">nossos alunos</span>
+                    </h2>
+                    <div class="w-24 h-1 bg-brand-primary mx-auto"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-brand-darkgray p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition-colors" data-aos="fade-up" data-aos-delay="0">
+                        <div class="flex text-brand-primary mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-brand-gray-300 italic mb-6 leading-relaxed">"Conteúdo divisor de águas! Mudou completamente a forma como prescrevo treinos e avalio meus alunos. A imersão me deu a clareza que eu precisava."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center text-brand-primary font-bold">RF</div>
+                            <div>
+                                <h4 class="text-white font-bold uppercase tracking-wider text-sm">Rafael Fernandes</h4>
+                                <span class="text-brand-gray-500 text-xs uppercase">Personal Trainer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-brand-darkgray p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition-colors" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex text-brand-primary mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-brand-gray-300 italic mb-6 leading-relaxed">"Melhor investimento que fiz na minha carreira neste ano. O conhecimento prático passado pelos professores me permitiu dobrar o valor da minha hora/aula."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center text-brand-primary font-bold">MS</div>
+                            <div>
+                                <h4 class="text-white font-bold uppercase tracking-wider text-sm">Mariana Silva</h4>
+                                <span class="text-brand-gray-500 text-xs uppercase">Consultoria Esportiva</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-brand-darkgray p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition-colors" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex text-brand-primary mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-brand-gray-300 italic mb-6 leading-relaxed">"Direto ao ponto, sem enrolação. A visão de biomecânica e hipertrofia apresentada é fundamental para quem quer se destacar no mercado fitness."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center text-brand-primary font-bold">CM</div>
+                            <div>
+                                <h4 class="text-white font-bold uppercase tracking-wider text-sm">Carlos Monteiro</h4>
+                                <span class="text-brand-gray-500 text-xs uppercase">Profissional de Ed. Física</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -321,79 +410,68 @@
                     <div class="w-24 h-1 bg-brand-primary mx-auto"></div>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                    <div class="group relative rounded-xl overflow-hidden h-[380px] shadow-2xl border border-white/5 cursor-pointer" data-aos="fade-up" data-aos-delay="0">
-                        <img src="img/1.webp" alt="Destaque-se no Mercado" class="absolute inset-0 w-full h-full object-cover object-right-top transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/80 to-transparent md:opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute inset-0 p-8 flex flex-col justify-end benefit-content transition-transform duration-500">
-                            <div class="w-12 h-12 bg-brand-primary/90 rounded flex items-center justify-center mb-4 shadow-lg text-white">
-                                <i class="fas fa-dumbbell text-xl text-white"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold text-white uppercase mb-2 leading-tight">Destaque-se no Mercado</h3>
-                            <p class="text-brand-gray-300 text-sm benefit-desc transition-opacity duration-500 leading-relaxed">Aprenda a estruturar treinos mais eficientes, construir resultados reais e elevar o seu posicionamento profissional.</p>
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <div class="flex items-start gap-5 bg-brand-darkgray p-6 md:p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition-all duration-300 hover:-translate-y-1 shadow-lg" data-aos="fade-up" data-aos-delay="0">
+                        <div class="w-14 h-14 shrink-0 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary border border-brand-primary/20">
+                            <i class="fas fa-dumbbell text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading text-xl md:text-2xl font-bold text-white uppercase mb-2">Destaque-se no Mercado</h3>
+                            <p class="text-brand-gray-400 text-sm md:text-base leading-relaxed">Aprenda a estruturar treinos mais eficientes, construir resultados reais e elevar o seu posicionamento profissional.</p>
                         </div>
                     </div>
 
-                    <div class="group relative rounded-xl overflow-hidden h-[380px] shadow-2xl border border-white/5 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                        <img src="img/2.webp" alt="Ganhe Visibilidade" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/80 to-transparent md:opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute inset-0 p-8 flex flex-col justify-end benefit-content transition-transform duration-500">
-                            <div class="w-12 h-12 bg-brand-primary/90 rounded flex items-center justify-center mb-4 shadow-lg text-white">
-                                <i class="fas fa-eye text-xl text-white"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold text-white uppercase mb-2 leading-tight">Ganhe Visibilidade</h3>
-                            <p class="text-brand-gray-300 text-sm benefit-desc transition-opacity duration-500 leading-relaxed">Aprenda estratégias para se destacar como profissional e aumentar sua relevância no mercado fitness.</p>
+                    <div class="flex items-start gap-5 bg-brand-darkgray p-6 md:p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition-all duration-300 hover:-translate-y-1 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-14 h-14 shrink-0 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary border border-brand-primary/20">
+                            <i class="fas fa-eye text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading text-xl md:text-2xl font-bold text-white uppercase mb-2">Ganhe Visibilidade</h3>
+                            <p class="text-brand-gray-400 text-sm md:text-base leading-relaxed">Aprenda estratégias para se destacar como profissional e aumentar sua relevância no mercado fitness.</p>
                         </div>
                     </div>
 
-                    <div class="group relative rounded-xl overflow-hidden h-[380px] shadow-2xl border border-white/5 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-                        <img src="img/3.webp" alt="Teoria e Prática" class="absolute inset-0 w-full h-full object-cover object-right-top transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/80 to-transparent md:opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute inset-0 p-8 flex flex-col justify-end benefit-content transition-transform duration-500">
-                            <div class="w-12 h-12 bg-brand-primary/90 rounded flex items-center justify-center mb-4 shadow-lg text-white">
-                                <i class="fas fa-brain text-xl text-white"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold text-white uppercase mb-2 leading-tight">Teoria e Prática</h3>
-                            <p class="text-brand-gray-300 text-sm benefit-desc transition-opacity duration-500 leading-relaxed">Entenda como os especialistas pensam a prescrição de musculação e como aplicar esses conceitos com seus alunos.</p>
+                    <div class="flex items-start gap-5 bg-brand-darkgray p-6 md:p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition-all duration-300 hover:-translate-y-1 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-14 h-14 shrink-0 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary border border-brand-primary/20">
+                            <i class="fas fa-brain text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading text-xl md:text-2xl font-bold text-white uppercase mb-2">Teoria e Prática</h3>
+                            <p class="text-brand-gray-400 text-sm md:text-base leading-relaxed">Entenda como os especialistas pensam a prescrição de musculação e como aplicar esses conceitos com seus alunos.</p>
                         </div>
                     </div>
 
-                    <div class="group relative rounded-xl overflow-hidden h-[380px] shadow-2xl border border-white/5 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
-                        <img src="img/5.webp" alt="Supere Dificuldades" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/80 to-transparent md:opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute inset-0 p-8 flex flex-col justify-end benefit-content transition-transform duration-500">
-                            <div class="w-12 h-12 bg-brand-primary/90 rounded flex items-center justify-center mb-4 shadow-lg text-white">
-                                <i class="fas fa-chart-line text-xl text-white"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold text-white uppercase mb-2 leading-tight">Supere Dificuldades</h3>
-                            <p class="text-brand-gray-300 text-sm benefit-desc transition-opacity duration-500 leading-relaxed">Descubra caminhos para valorizar seu trabalho financeiramente e transforme seu conhecimento em uma carreira sólida.</p>
+                    <div class="flex items-start gap-5 bg-brand-darkgray p-6 md:p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition-all duration-300 hover:-translate-y-1 shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-14 h-14 shrink-0 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary border border-brand-primary/20">
+                            <i class="fas fa-chart-line text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading text-xl md:text-2xl font-bold text-white uppercase mb-2">Supere Dificuldades</h3>
+                            <p class="text-brand-gray-400 text-sm md:text-base leading-relaxed">Descubra caminhos para valorizar seu trabalho financeiramente e transforme seu conhecimento em uma carreira sólida.</p>
                         </div>
                     </div>
 
-                    <div class="group relative rounded-xl overflow-hidden h-[380px] shadow-2xl border border-white/5 cursor-pointer" data-aos="fade-up" data-aos-delay="400">
-                        <img src="img/6.webp" alt="Conquiste Mais Alunos" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/80 to-transparent md:opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute inset-0 p-8 flex flex-col justify-end benefit-content transition-transform duration-500">
-                            <div class="w-12 h-12 bg-brand-primary/90 rounded flex items-center justify-center mb-4 shadow-lg text-white">
-                                <i class="fas fa-users text-xl text-white"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold text-white uppercase mb-2 leading-tight">Conquiste Mais Alunos</h3>
-                            <p class="text-brand-gray-300 text-sm benefit-desc transition-opacity duration-500 leading-relaxed">Aprenda métodos práticos que ajudam a gerar resultados mais consistentes para seus clientes.</p>
+                    <div class="flex items-start gap-5 bg-brand-darkgray p-6 md:p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition-all duration-300 hover:-translate-y-1 shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-14 h-14 shrink-0 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary border border-brand-primary/20">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading text-xl md:text-2xl font-bold text-white uppercase mb-2">Conquiste Mais Alunos</h3>
+                            <p class="text-brand-gray-400 text-sm md:text-base leading-relaxed">Aprenda métodos práticos que ajudam a gerar resultados mais consistentes para seus clientes.</p>
                         </div>
                     </div>
 
-                    <div class="group relative rounded-xl overflow-hidden h-[380px] shadow-2xl border border-white/5 cursor-pointer" data-aos="fade-up" data-aos-delay="500">
-                        <img src="img/1.webp" alt="Domine a Hipertrofia" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/80 to-transparent md:opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute inset-0 p-8 flex flex-col justify-end benefit-content transition-transform duration-500">
-                            <div class="w-12 h-12 bg-brand-primary/90 rounded flex items-center justify-center mb-4 shadow-lg text-white">
-                                <i class="fas fa-bolt text-xl text-white"></i>
-                            </div>
-                            <h3 class="font-heading text-2xl font-bold text-white uppercase mb-2 leading-tight">Domine a Hipertrofia</h3>
-                            <p class="text-brand-gray-300 text-sm benefit-desc transition-opacity duration-500 leading-relaxed">Aprenda a estruturar treinos com foco absoluto em hipertrofia e construção estética de alto nível.</p>
+                    <div class="flex items-start gap-5 bg-brand-darkgray p-6 md:p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition-all duration-300 hover:-translate-y-1 shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                        <div class="w-14 h-14 shrink-0 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary border border-brand-primary/20">
+                            <i class="fas fa-bolt text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading text-xl md:text-2xl font-bold text-white uppercase mb-2">Domine a Hipertrofia</h3>
+                            <p class="text-brand-gray-400 text-sm md:text-base leading-relaxed">Aprenda a estruturar treinos com foco absoluto em hipertrofia e construção estética de alto nível.</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="text-center mt-12" data-aos="fade-up">
                     <a href="#checkout" class="bg-brand-primary hover:bg-brand-accent text-white font-heading font-bold text-xl uppercase tracking-widest py-4 px-10 rounded-xl transition-all duration-300 shadow-[0_0_30px_rgba(220,38,38,0.4)] hover:shadow-[0_0_50px_rgba(220,38,38,0.6)] hover:-translate-y-0.5 inline-block">
                         Quero garantir minha vaga
@@ -522,30 +600,6 @@
         </div>
     </footer>
 
-    <div class="fixed bottom-0 left-0 right-0 z-[80] bg-brand-primary border-t-2 border-brand-accent px-4 py-3 shadow-[0_-8px_30px_rgba(220,38,38,0.4)]">
-        <div class="container mx-auto max-w-5xl flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
-            <div class="flex items-center gap-3 flex-1 min-w-0">
-                <div class="flex items-center justify-center w-10 h-10 rounded-full bg-white/15 text-white shrink-0 ring-2 ring-white/30 shadow-inner">
-                    <i class="fas fa-dumbbell text-lg"></i>
-                </div>
-                <div class="flex flex-col gap-1.5 min-w-0 flex-1">
-                    <p class="text-white font-heading font-bold uppercase tracking-wider text-sm sm:text-base text-center sm:text-left">
-                        Disponível apenas <span class="text-brand-navy font-black bg-white px-2 py-0.5 rounded">500</span> ingressos Lote 1
-                    </p>
-                    <div class="flex items-center gap-2">
-                        <div class="h-2 flex-1 min-w-[80px] max-w-[200px] rounded-full bg-white/25 overflow-hidden" aria-hidden="true">
-                            <div class="progress-fill h-full rounded-full bg-white transition-[width] duration-[1500ms] ease-out" style="width: 0"></div>
-                        </div>
-                        <span class="progress-pct text-white font-heading font-black text-sm tabular-nums">0%</span>
-                    </div>
-                </div>
-            </div>
-            <button class="js-open-modal w-full sm:w-auto bg-brand-navy hover:bg-brand-anthracite text-white font-heading font-bold text-sm sm:text-base uppercase tracking-widest py-2.5 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 whitespace-nowrap border border-white/10">
-                Garantir meu ingresso
-            </button>
-        </div>
-    </div>
-
     <div id="cookie-bar" class="fixed bottom-0 left-0 right-0 z-[90] bg-brand-night border-t border-white/10 px-4 py-4 md:py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.5)] hidden">
         <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <p class="text-brand-gray-400 text-sm text-center sm:text-left">
@@ -607,26 +661,6 @@
                 offset: 50,
                 duration: 800,
             });
-
-            // Barra de progresso de ingressos (0% → 94% ao carregar)
-            (function () {
-                const fill = document.querySelector('.progress-fill');
-                const pct = document.querySelector('.progress-pct');
-                if (!fill || !pct) return;
-                const endPct = 94;
-                const duration = 1500;
-                const start = performance.now();
-                function step(now) {
-                    const elapsed = now - start;
-                    const t = Math.min(elapsed / duration, 1);
-                    const eased = 1 - Math.pow(1 - t, 2);
-                    const value = Math.round(eased * endPct);
-                    fill.style.width = value + '%';
-                    pct.textContent = value + '%';
-                    if (t < 1) requestAnimationFrame(step);
-                }
-                requestAnimationFrame(step);
-            })();
 
             // ==========================================
             // CONFIGURAÇÕES GERAIS
