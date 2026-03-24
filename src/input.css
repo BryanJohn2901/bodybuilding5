@@ -40,3 +40,125 @@
 .cupom-ouro-ticket {
   filter: sepia(0.35) hue-rotate(-25deg) saturate(1.3);
 }
+
+.depoimentos-carousel {
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  cursor: grab;
+  scrollbar-width: none;
+  touch-action: pan-y;
+}
+
+.depoimentos-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.depoimentos-track {
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  gap: 1rem;
+}
+
+.depoimento-slide {
+  width: clamp(240px, 26vw, 320px);
+  height: clamp(360px, 54vw, 560px);
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: zoom-in;
+}
+
+.depoimentos-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.depoimentos-arrow {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.depoimentos-arrow:hover {
+  background: rgba(220, 38, 38, 0.28);
+  border-color: rgba(220, 38, 38, 0.7);
+}
+
+.depoimentos-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.depoimentos-dot {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.28);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.depoimentos-dot.is-active {
+  width: 24px;
+  background: #dc2626;
+}
+
+.depoimentos-carousel.is-dragging {
+  cursor: grabbing;
+}
+
+.depoimentos-carousel-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  background: rgba(0, 0, 0, 0.88);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.depoimentos-carousel-lightbox.is-open {
+  display: flex;
+}
+
+.depoimentos-carousel-lightbox img {
+  max-width: min(100%, 1200px);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.depoimentos-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}

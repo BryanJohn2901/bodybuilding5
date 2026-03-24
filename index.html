@@ -108,6 +108,128 @@
         .cupom-ouro-ticket {
             filter: sepia(0.35) hue-rotate(-25deg) saturate(1.3);
         }
+
+        .depoimentos-carousel {
+            overflow-x: auto;
+            overflow-y: hidden;
+            position: relative;
+            cursor: grab;
+            scrollbar-width: none;
+            touch-action: pan-y;
+        }
+
+        .depoimentos-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .depoimentos-track {
+            display: flex;
+            align-items: stretch;
+            width: max-content;
+            gap: 1rem;
+        }
+
+        .depoimentos-carousel.is-dragging {
+            cursor: grabbing;
+        }
+
+        .depoimento-slide {
+            width: clamp(240px, 26vw, 320px);
+            height: clamp(360px, 54vw, 560px);
+            object-fit: contain;
+            object-position: center;
+            flex-shrink: 0;
+            user-select: none;
+            -webkit-user-drag: none;
+            cursor: zoom-in;
+        }
+
+        .depoimentos-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .depoimentos-arrow {
+            width: 42px;
+            height: 42px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 999px;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.06);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .depoimentos-arrow:hover {
+            background: rgba(220, 38, 38, 0.28);
+            border-color: rgba(220, 38, 38, 0.7);
+        }
+
+        .depoimentos-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.45rem;
+            flex-wrap: wrap;
+        }
+
+        .depoimentos-dot {
+            width: 10px;
+            height: 10px;
+            border: 0;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.28);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .depoimentos-dot.is-active {
+            width: 24px;
+            background: #dc2626;
+        }
+
+        .depoimentos-carousel-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 110;
+            background: rgba(0, 0, 0, 0.88);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .depoimentos-carousel-lightbox.is-open {
+            display: flex;
+        }
+
+        .depoimentos-carousel-lightbox img {
+            max-width: min(100%, 1200px);
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .depoimentos-lightbox-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 44px;
+            height: 44px;
+            border: 0;
+            border-radius: 999px;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.15);
+            font-size: 1.4rem;
+            line-height: 1;
+            cursor: pointer;
+        }
     </style>
     <script>
         (function(h,o,t,j,a,r){
@@ -185,7 +307,7 @@
                         </div>
 
                         <h1 data-aos="fade-up" data-aos-delay="100" class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-[1.55] tracking-tight mb-6 drop-shadow-2xl lowercase">
-                            o caminho para dominar a musculação,<br>a estética corporal e os <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-primary to-brand-accent drop-shadow-none">segredos da hipertrofia</span> com alguns dos maiores especialistas do brasil.
+                            O caminho para dominar a musculação,<br>a estética corporal e os <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-primary to-brand-accent drop-shadow-none">segredos da hipertrofia</span> com alguns dos maiores especialistas do brasil.
                         </h1>
 
                         <p data-aos="fade-up" data-aos-delay="200" class="text-base md:text-lg text-brand-gray-300 mb-10 max-w-xl leading-relaxed mx-auto md:mx-0">
@@ -328,49 +450,42 @@
                     <div class="w-24 h-1 bg-brand-primary mx-auto"></div>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <div class="bg-brand-darkgray p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition-colors" data-aos="fade-up" data-aos-delay="0">
-                        <div class="flex text-brand-primary mb-4">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-brand-gray-300 italic mb-6 leading-relaxed">"Conteúdo divisor de águas! Mudou completamente a forma como prescrevo treinos e avalio meus alunos. A imersão me deu a clareza que eu precisava."</p>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center text-brand-primary font-bold">RF</div>
-                            <div>
-                                <h4 class="text-white font-bold uppercase tracking-wider text-sm">Rafael Fernandes</h4>
-                                <span class="text-brand-gray-500 text-xs uppercase">Personal Trainer</span>
-                            </div>
-                        </div>
+                <div class="depoimentos-carousel max-w-6xl mx-auto" data-aos="fade-up">
+                    <div class="depoimentos-track">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-02-20%20233249.png" alt="Depoimento de aluno 1" class="depoimento-slide">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-02-20%20233300.png" alt="Depoimento de aluno 2" class="depoimento-slide">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-02-20%20233322.png" alt="Depoimento de aluno 3" class="depoimento-slide">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-02-20%20234132.png" alt="Depoimento de aluno 4" class="depoimento-slide">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-02-20%20234143.png" alt="Depoimento de aluno 5" class="depoimento-slide">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-03-24%20132132.png" alt="Depoimento de aluno 6" class="depoimento-slide">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-03-24%20132221.png" alt="Depoimento de aluno 7" class="depoimento-slide">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-03-24%20132237.png" alt="Depoimento de aluno 8" class="depoimento-slide">
+
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-02-20%20233249.png" alt="Depoimento de aluno 1" class="depoimento-slide" aria-hidden="true">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-02-20%20233300.png" alt="Depoimento de aluno 2" class="depoimento-slide" aria-hidden="true">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-02-20%20233322.png" alt="Depoimento de aluno 3" class="depoimento-slide" aria-hidden="true">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-02-20%20234132.png" alt="Depoimento de aluno 4" class="depoimento-slide" aria-hidden="true">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-02-20%20234143.png" alt="Depoimento de aluno 5" class="depoimento-slide" aria-hidden="true">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-03-24%20132132.png" alt="Depoimento de aluno 6" class="depoimento-slide" aria-hidden="true">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-03-24%20132221.png" alt="Depoimento de aluno 7" class="depoimento-slide" aria-hidden="true">
+                        <img src="img/depoimentos/Captura%20de%20tela%202026-03-24%20132237.png" alt="Depoimento de aluno 8" class="depoimento-slide" aria-hidden="true">
                     </div>
-                    <div class="bg-brand-darkgray p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition-colors" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex text-brand-primary mb-4">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-brand-gray-300 italic mb-6 leading-relaxed">"Melhor investimento que fiz na minha carreira neste ano. O conhecimento prático passado pelos professores me permitiu dobrar o valor da minha hora/aula."</p>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center text-brand-primary font-bold">MS</div>
-                            <div>
-                                <h4 class="text-white font-bold uppercase tracking-wider text-sm">Mariana Silva</h4>
-                                <span class="text-brand-gray-500 text-xs uppercase">Consultoria Esportiva</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-brand-darkgray p-8 rounded-2xl border border-white/5 hover:border-brand-primary/30 transition-colors" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex text-brand-primary mb-4">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-brand-gray-300 italic mb-6 leading-relaxed">"Direto ao ponto, sem enrolação. A visão de biomecânica e hipertrofia apresentada é fundamental para quem quer se destacar no mercado fitness."</p>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center text-brand-primary font-bold">CM</div>
-                            <div>
-                                <h4 class="text-white font-bold uppercase tracking-wider text-sm">Carlos Monteiro</h4>
-                                <span class="text-brand-gray-500 text-xs uppercase">Profissional de Ed. Física</span>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <div class="depoimentos-controls max-w-6xl mx-auto mt-8" data-aos="fade-up">
+                    <button type="button" class="depoimentos-arrow" id="depoimentos-prev" aria-label="Imagem anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="depoimentos-dots" id="depoimentos-dots" aria-label="Navegação dos depoimentos"></div>
+                    <button type="button" class="depoimentos-arrow" id="depoimentos-next" aria-label="Próxima imagem">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </section>
+        <div id="depoimentos-lightbox" class="depoimentos-carousel-lightbox" aria-hidden="true">
+            <button type="button" id="depoimentos-lightbox-close" class="depoimentos-lightbox-close" aria-label="Fechar imagem ampliada">&times;</button>
+            <img id="depoimentos-lightbox-image" src="" alt="Depoimento ampliado">
+        </div>
 
         <section id="cupom-ouro" class="py-24 bg-brand-night relative border-b border-white/5">
             <div class="container mx-auto px-4">
@@ -715,6 +830,213 @@
                     closePopup();
                 }
             });
+
+            // ==========================================
+            // CARROSSEL DE DEPOIMENTOS + LIGHTBOX
+            // ==========================================
+            const depoimentosCarousel = document.querySelector('.depoimentos-carousel');
+            const depoimentosTrack = document.querySelector('.depoimentos-track');
+            const depoimentoSlides = document.querySelectorAll('.depoimento-slide');
+            const depoimentoOriginalSlides = document.querySelectorAll('.depoimento-slide:not([aria-hidden="true"])');
+            const depoimentosLightbox = document.getElementById('depoimentos-lightbox');
+            const depoimentosLightboxImage = document.getElementById('depoimentos-lightbox-image');
+            const depoimentosLightboxClose = document.getElementById('depoimentos-lightbox-close');
+            const depoimentosPrev = document.getElementById('depoimentos-prev');
+            const depoimentosNext = document.getElementById('depoimentos-next');
+            const depoimentosDots = document.getElementById('depoimentos-dots');
+
+            if (
+                depoimentosCarousel &&
+                depoimentosTrack &&
+                depoimentoSlides.length > 0 &&
+                depoimentoOriginalSlides.length > 0 &&
+                depoimentosLightbox &&
+                depoimentosLightboxImage &&
+                depoimentosLightboxClose &&
+                depoimentosPrev &&
+                depoimentosNext &&
+                depoimentosDots
+            ) {
+                let isHoveringCarousel = false;
+                let isDraggingCarousel = false;
+                let dragStartX = 0;
+                let dragStartScrollLeft = 0;
+                let dragMoved = false;
+                let suppressSlideClickUntil = 0;
+                let lastFrameTime = 0;
+                const autoScrollSpeed = 0.45;
+                const slideCount = depoimentoOriginalSlides.length;
+                const dots = [];
+                let activeIndex = 0;
+
+                const getSlideStep = () => {
+                    if (depoimentoOriginalSlides.length < 2) return depoimentoOriginalSlides[0].clientWidth || 300;
+                    return depoimentoOriginalSlides[1].offsetLeft - depoimentoOriginalSlides[0].offsetLeft;
+                };
+                const mod = (value, base) => ((value % base) + base) % base;
+                const getHalfTrackWidth = () => depoimentosTrack.scrollWidth / 2;
+                const getCurrentIndex = () => {
+                    const halfTrackWidth = getHalfTrackWidth();
+                    const slideStep = getSlideStep();
+                    if (!halfTrackWidth || !slideStep) return 0;
+                    const normalized = mod(depoimentosCarousel.scrollLeft, halfTrackWidth);
+                    return mod(Math.round(normalized / slideStep), slideCount);
+                };
+                const updateDots = () => {
+                    activeIndex = getCurrentIndex();
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('is-active', index === activeIndex);
+                    });
+                };
+                const scrollByDelta = (delta, behavior = 'smooth') => {
+                    if (!delta) return;
+                    depoimentosCarousel.scrollTo({
+                        left: depoimentosCarousel.scrollLeft + delta,
+                        behavior,
+                    });
+                };
+
+                const openDepoimentoLightbox = (src, alt) => {
+                    depoimentosLightboxImage.src = src;
+                    depoimentosLightboxImage.alt = alt || 'Depoimento ampliado';
+                    depoimentosLightbox.classList.add('is-open');
+                    depoimentosLightbox.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                };
+
+                const closeDepoimentoLightbox = () => {
+                    depoimentosLightbox.classList.remove('is-open');
+                    depoimentosLightbox.setAttribute('aria-hidden', 'true');
+                    depoimentosLightboxImage.src = '';
+                    if (modal.classList.contains('hidden')) {
+                        document.body.style.overflow = '';
+                    }
+                };
+
+                const syncInfiniteScroll = () => {
+                    const halfTrackWidth = getHalfTrackWidth();
+                    if (!halfTrackWidth) return;
+
+                    if (depoimentosCarousel.scrollLeft >= halfTrackWidth) {
+                        depoimentosCarousel.scrollLeft -= halfTrackWidth;
+                    } else if (depoimentosCarousel.scrollLeft < 0) {
+                        depoimentosCarousel.scrollLeft += halfTrackWidth;
+                    }
+                };
+
+                const autoScrollTick = (timestamp) => {
+                    if (!lastFrameTime) lastFrameTime = timestamp;
+                    const deltaTime = timestamp - lastFrameTime;
+                    lastFrameTime = timestamp;
+
+                    const lightboxOpen = depoimentosLightbox.classList.contains('is-open');
+                    if (!isHoveringCarousel && !isDraggingCarousel && !lightboxOpen) {
+                        depoimentosCarousel.scrollLeft += autoScrollSpeed * (deltaTime / 16);
+                        syncInfiniteScroll();
+                        updateDots();
+                    }
+
+                    window.requestAnimationFrame(autoScrollTick);
+                };
+
+                depoimentosCarousel.addEventListener('mouseenter', () => {
+                    isHoveringCarousel = true;
+                });
+
+                depoimentosCarousel.addEventListener('mouseleave', () => {
+                    isHoveringCarousel = false;
+                });
+
+                depoimentosCarousel.addEventListener('scroll', updateDots);
+
+                depoimentosCarousel.addEventListener('pointerdown', (e) => {
+                    isDraggingCarousel = true;
+                    dragMoved = false;
+                    dragStartX = e.clientX;
+                    dragStartScrollLeft = depoimentosCarousel.scrollLeft;
+                    depoimentosCarousel.classList.add('is-dragging');
+                    depoimentosCarousel.setPointerCapture(e.pointerId);
+                });
+
+                depoimentosCarousel.addEventListener('pointermove', (e) => {
+                    if (!isDraggingCarousel) return;
+                    const deltaX = e.clientX - dragStartX;
+                    if (Math.abs(deltaX) > 5) {
+                        dragMoved = true;
+                    }
+                    depoimentosCarousel.scrollLeft = dragStartScrollLeft - deltaX;
+                    syncInfiniteScroll();
+                });
+
+                const endCarouselDrag = () => {
+                    if (!isDraggingCarousel) return;
+                    if (dragMoved) {
+                        suppressSlideClickUntil = Date.now() + 150;
+                    }
+                    isDraggingCarousel = false;
+                    depoimentosCarousel.classList.remove('is-dragging');
+                };
+
+                depoimentosCarousel.addEventListener('pointerup', endCarouselDrag);
+                depoimentosCarousel.addEventListener('pointercancel', endCarouselDrag);
+
+                depoimentoSlides.forEach((slide) => {
+                    slide.setAttribute('draggable', 'false');
+                    slide.addEventListener('click', () => {
+                        if (Date.now() < suppressSlideClickUntil) return;
+                        openDepoimentoLightbox(slide.src, slide.alt);
+                    });
+                });
+
+                for (let i = 0; i < slideCount; i++) {
+                    const dot = document.createElement('button');
+                    dot.type = 'button';
+                    dot.className = 'depoimentos-dot';
+                    dot.setAttribute('aria-label', `Ir para depoimento ${i + 1}`);
+                    dot.addEventListener('click', () => {
+                        const halfTrackWidth = getHalfTrackWidth();
+                        const slideStep = getSlideStep();
+                        if (!halfTrackWidth || !slideStep) return;
+                        const currentNormalized = mod(depoimentosCarousel.scrollLeft, halfTrackWidth);
+                        const targetNormalized = i * slideStep;
+                        let delta = targetNormalized - currentNormalized;
+                        if (delta > halfTrackWidth / 2) delta -= halfTrackWidth;
+                        if (delta < -halfTrackWidth / 2) delta += halfTrackWidth;
+                        scrollByDelta(delta);
+                    });
+                    dots.push(dot);
+                    depoimentosDots.appendChild(dot);
+                }
+
+                const moveByDirection = (direction) => {
+                    const slideStep = getSlideStep();
+                    if (!slideStep) return;
+                    scrollByDelta(direction * slideStep);
+                    setTimeout(() => {
+                        syncInfiniteScroll();
+                        updateDots();
+                    }, 220);
+                };
+
+                depoimentosPrev.addEventListener('click', () => moveByDirection(-1));
+                depoimentosNext.addEventListener('click', () => moveByDirection(1));
+
+                depoimentosLightboxClose.addEventListener('click', closeDepoimentoLightbox);
+                depoimentosLightbox.addEventListener('click', (e) => {
+                    if (e.target === depoimentosLightbox) {
+                        closeDepoimentoLightbox();
+                    }
+                });
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && depoimentosLightbox.classList.contains('is-open')) {
+                        closeDepoimentoLightbox();
+                    }
+                });
+
+                updateDots();
+                window.requestAnimationFrame(autoScrollTick);
+            }
 
             // ==========================================
             // AVISO DE COOKIES

@@ -21,10 +21,7 @@ function copyAssets() {
   const imgSrc = path.join(ROOT, 'img');
   const imgDest = path.join(DIST, 'img');
   if (fs.existsSync(imgSrc)) {
-    const files = fs.readdirSync(imgSrc);
-    for (const f of files) {
-      fs.copyFileSync(path.join(imgSrc, f), path.join(imgDest, f));
-    }
+    fs.cpSync(imgSrc, imgDest, { recursive: true });
   }
 }
 
