@@ -24,8 +24,8 @@ module.exports = {
         heading: ['Oswald', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-pattern': "url('../img/Prancheta 1.png')",
-        'hero-mobile': "url('../img/Prancheta 1-1.png')",
+        'hero-pattern': "url('../assets/Prancheta 1.png')",
+        'hero-mobile': "url('../assets/Prancheta 1-1.png')",
         'texture-pattern': "url('https://www.transparenttextures.com/patterns/carbon-fibre.png')",
       },
       keyframes: {
